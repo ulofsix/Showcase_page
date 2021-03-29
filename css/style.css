@@ -1,0 +1,11 @@
+.top_bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  z-index: 100;
+}
+
+.display_none {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
