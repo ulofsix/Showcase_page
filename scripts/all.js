@@ -1,3 +1,5 @@
-import '../scripts/include_ajax.js';
+new WOW().init();
+import '../scripts/include_jq.js';
+
 
 
