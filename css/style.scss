@@ -147,16 +147,18 @@ main {
             align-items: center;
             justify-content: space-around;
             padding: 1rem;
+
+            margin-bottom: 1rem;
             // flex: 1 1 300px;
             div.image-container {
                 overflow: hidden;
-                // width: 15vw;
-                height: 20vh;
+                width: 20vw;
+                // height: 20vh;
                 border-radius: 5%;
                 img {
                     // margin: 1rem 0rem;
-                    // width: 15vw;
-                    height: 20vh;
+                    width: 20vw;
+                    // height: 20vh;
                     border-radius: 5%;
                     transition: all 0.2s;
                 }
@@ -175,5 +177,24 @@ header form * {
 @media screen and (min-width: 1280px) {
     header form {
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        section.booklist {
+            .book {
+                background-color: #000;
+                div.image-container {
+                    width: 40vw;
+                    img {
+                        width: 40vw;
+                    }
+                }
+            }
+        }
+    }
+    body {
+        background-color: saddlebrown;
     }
 }

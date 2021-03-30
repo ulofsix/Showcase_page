@@ -199,16 +199,17 @@ main section.booklist .book {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 main section.booklist .book div.image-container {
   overflow: hidden;
-  height: 20vh;
+  width: 20vw;
   border-radius: 5%;
 }
 
 main section.booklist .book div.image-container img {
-  height: 20vh;
+  width: 20vw;
   border-radius: 5%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -226,6 +227,21 @@ header form * {
 @media screen and (min-width: 1280px) {
   header form {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main section.booklist .book {
+    background-color: #000;
+  }
+  main section.booklist .book div.image-container {
+    width: 40vw;
+  }
+  main section.booklist .book div.image-container img {
+    width: 40vw;
+  }
+  body {
+    background-color: saddlebrown;
   }
 }
 /*# sourceMappingURL=style.css.map */
