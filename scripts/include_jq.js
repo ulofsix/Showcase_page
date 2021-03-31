@@ -25,12 +25,14 @@ $(function () {
         // e.preventDefault();
         console.log("i_click");
     });
+    /* load booklist */
 
-
+    
     /* load footer */
-    $("footer").load("../includes/top_bar.html");
+    $("footer").load("../includes/footer.html");
 
 
+    
 });
 
 

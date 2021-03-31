@@ -5,6 +5,10 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .bg_img {
   height: 100vh;
   /*設定圖片最小高度在90VH，可視螢幕90%*/
