@@ -9,6 +9,11 @@ a {
   text-decoration: none;
 }
 
+html {
+  /* 平滑滾輪 */
+  scroll-behavior: smooth;
+}
+
 .bg_img {
   height: 100vh;
   /*設定圖片最小高度在90VH，可視螢幕90%*/
@@ -39,7 +44,7 @@ a {
   z-index: 100;
 }
 
-.display_none {
+.hidden {
   display: none;
 }
 
