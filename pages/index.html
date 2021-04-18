@@ -50,78 +50,36 @@
     </section>
     <section class="container">
       <h2 class="my-5">
-        作品預覽
+        作品預覽(本處抓取使用VUE+ajax)
       </h2>
+
       <section class="booklist row" id="booklist">
-
-
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12" v-for="book in booklist">
           <div class="book border bg-light">
             <div class="image-container">
-              <a href="https://ulofsix.github.io/todolist/" target="_blank">
-                <img src="../imgs/todolist.png" alt="picture">
+              <a :src="book.book_view" target="_blank">
+                <img :src="book.book_img" alt="picture">
               </a>
             </div>
-            <h4>TODOLIST</h4>
-            <p>代辦事項清單，以HTML與JS實作。</p>
-            <a href="https://ulofsix.github.io/todolist/" target="_blank">
-              <button class="btn btn-outline-dark">查看展示網頁</button>
-            </a>
-            <a href="https://github.com/ulofsix/todolist">github_url</a>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-12">
-          <div class="book border bg-light">
-            <div class="image-container">
-              <a href="https://ulofsix.github.io/Travel_agency/" target="_blank">
-                <img src="../imgs/Travel_agency.png" alt="picture">
-              </a>
-            </div>
-            <h4>Travel_agency</h4>
-            <p>旅行社首頁網站_仿製</p>
-            <a href="https://ulofsix.github.io/Travel_agency/" target="_blank">
-              <button class="btn btn-outline-dark">查看展示網頁</button>
-            </a>
-            <a href="https://github.com/ulofsix/Travel_agency">github_url</a>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-12">
-          <div class="book border bg-light">
-            <div class="image-container">
-              <a href="https://ulofsix.github.io/opendata_get/" target="_blank">
-                <img src="../imgs/opendata_get.png" alt="picture">
-              </a>
-            </div>
-            <h4>opendata_get</h4>
+            <h4>{{ book.book_title }}</h4>
+            <p>{{ book.book_text }}</p>
             <p>
-              使用AJAX抓取開放資料庫 <br>
-              檔案稍大，如無報錯，請耐心等候
+              <a :href="book.book_view" target="_blank">
+                <button class="btn btn-outline-dark">查看展示頁</button>
+              </a>
+              <a :href="book.book_code" target="_blank">
+                <button class="btn btn-primary">查看原始碼</button>
+              </a>
             </p>
-            <a href="https://ulofsix.github.io/opendata_get/" target="_blank">
-              <button class="btn btn-outline-dark">查看展示網頁</button>
-            </a>
-            <a href="https://github.com/ulofsix/opendata_get">github_url</a>
           </div>
         </div>
-
-        <!-- <div class="col-md-4 col-sm-12">
-                <div class="book border bg-light">
-                    <div class="image-container">
-                        <a href="https://ulofsix.github.io/Travel_agency/" target="_blank">
-                            <img src="../imgs/Travel_agency.png" alt="picture">
-                        </a>
-                    </div>
-                    <h4>Travel_agency</h4>
-                    <p>旅行社首頁網站_仿製</p>
-                </div>
-            </div> -->
-
-
-
-
+        <!--  -->
       </section>
+
+
+
+
+    </section>
 
 
   </main>
@@ -140,6 +98,8 @@
     <!-- scripts -->
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.3/jquery.csv.min.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -186,6 +146,8 @@ crossorigin="anonymous"></script> -->
 
     <!-- 總管理 -->
     <script type="module" src="../scripts/all.js"></script>
+
+
   </div>
 </body>
 

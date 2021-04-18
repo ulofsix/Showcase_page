@@ -38,15 +38,61 @@
 
 <body>
     <header></header>
-    <pre class="prettyprint">
+    <!-- <pre class="prettyprint">
         public class HelloWorld {
         
             public static void main (String[] args) {
                 System.out.println("Hello, world!");
             }
         }
-    </pre>
+    </pre> -->
+    <main>
+        <!-- image part of the first page -->
+        <section class="backImage">
+            <div class="filter" id="filter"></div>
+            <h3>歡迎來到展示頁首頁<br>
 
+            </h3>
+            <button class="btn btn-outline-light" id="change_btn">切換一下</button>
+        </section>
+        <section class="container">
+            <h2 class="my-5">
+                作品預覽
+            </h2>
+            <section class="booklist row" id="booklist">
+                <div class="col-md-4 col-sm-12" v-for="book in booklist">
+                    <div class="book border bg-light">
+                        <div class="image-container">
+                            <!-- <a href="https://ulofsix.github.io/{{ book.book_id }}/" target="_blank">
+                                <img src="../imgs/{{ book.book_id }}.png" alt="picture">
+                            </a> -->
+                            <img :src="book.book_img" alt="picture">
+                        </div>
+                        <h4>{{ book.book_title }}</h4>
+                        <p>{{ book.book_text }}</p>
+                        <p>
+                            <!-- <a href="https://ulofsix.github.io/{{ book.book_id }}/" target="_blank">
+                                <button class="btn btn-outline-dark">查看展示網頁</button>
+                            </a> -->
+                            <!-- <a href="https://github.com/ulofsix/{{ book.book_id }}">
+                                <button class="btn btn-primary">github_url</button>
+                            </a> -->
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+            </section>
+        </section>
+
+
+    </main>
+    <div id="app">
+        <ol>
+            <li v-for="site in sites">
+                {{ site.name }}
+            </li>
+        </ol>
+    </div>
 
 
 
@@ -58,6 +104,8 @@
         <!-- scripts -->
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.3/jquery.csv.min.js"></script>
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -95,14 +143,66 @@
   crossorigin="anonymous"></script> -->
 
         <!-- vue.js -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script> -->
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+
+
+
         <!-- 代碼美化 -->
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-
         <!-- 總管理 -->
         <script type="module" src="../scripts/all.js"></script>
+        <!-- vue_test -->
+        <!-- <script>
+
+            let booklist_API = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeV1BNTRGQrzj3jmwK-0zD5n5taU8GpS0_kG4HSTH7x7xvrl857EjNkRzi0HTKTITx_w_XRhozltG5/pub?gid=1386077569&single=true&output=csv';
+            /*獲取booklist */
+            $.ajax({
+                type: 'GET',
+                url: booklist_API,
+                dataType: 'text',
+                error: function (e) {
+                    alert('An error occurred while processing API calls');
+                    console.log("API call Failed: ", e);
+                },
+                success: function (data) {
+                    /*csv轉換json*/
+                    var jsonData = $.csv.toObjects(data);
+                    console.log("jsonData");
+                    console.log(jsonData);
+                    /*將 booklist 綁定 */
+                    booklist.booklist = jsonData;
+                } // end: Ajax success API call
+            }); // end: of Ajax call
+
+
+ 
+
+            let booklist = new Vue({
+                el: '#booklist',
+                data: {
+                    booklist: []
+                }
+
+
+            });
+
+            new Vue({
+                el: '#app',
+                data: {
+                    sites: [
+                        { name: 'Runoob' },
+                        { name: 'Google' },
+                        { name: 'Taobao' }
+                    ]
+                }
+            })
+
+
+        </script> -->
+
     </div>
 </body>
 

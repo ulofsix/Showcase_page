@@ -37,19 +37,109 @@
 </head>
 
 <body>
+
   <header></header>
-  <nav></nav>
-  <section></section>
+  <main>
+    <!-- image part of the first page -->
+    <section class="backImage">
+      <div class="filter" id="filter"></div>
+      <h3>歡迎來到展示頁首頁<br>
+
+      </h3>
+      <button class="btn btn-outline-light" id="change_btn">切換一下</button>
+    </section>
+    <section class="container">
+      <h2 class="my-5">
+        作品預覽
+      </h2>
+      <section class="booklist row" id="booklist">
+        <div class="col-md-4 col-sm-12">
+          <div class="book border bg-light">
+            <div class="image-container">
+              <a href="https://ulofsix.github.io/todolist/" target="_blank">
+                <img src="../imgs/todolist.png" alt="picture">
+              </a>
+            </div>
+            <h4>TODOLIST</h4>
+            <p>代辦事項清單，以HTML與JS實作。</p>
+            <p>
+              <a href="https://ulofsix.github.io/todolist/" target="_blank">
+                <button class="btn btn-outline-dark">查看展示網頁</button>
+              </a>
+              <a href="https://github.com/ulofsix/todolist">
+                <button class="btn btn-primary">github_url</button>
+              </a>
+            </p>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-md-4 col-sm-12">
+          <div class="book border bg-light">
+            <div class="image-container">
+              <a href="https://ulofsix.github.io/Travel_agency/" target="_blank">
+                <img src="../imgs/Travel_agency.png" alt="picture">
+              </a>
+            </div>
+            <h4>Travel_agency</h4>
+            <p>旅行社首頁網站_仿製</p>
+            <a href="https://ulofsix.github.io/Travel_agency/" target="_blank">
+              <button class="btn btn-outline-dark">查看展示網頁</button>
+            </a>
+            <a href="https://github.com/ulofsix/Travel_agency">github_url</a>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-md-4 col-sm-12">
+          <div class="book border bg-light">
+            <div class="image-container">
+              <a href="https://ulofsix.github.io/opendata_get/" target="_blank">
+                <img src="../imgs/opendata_get.png" alt="picture">
+              </a>
+            </div>
+            <h4>opendata_get</h4>
+            <p>
+              使用AJAX抓取開放資料庫 <br>
+              檔案稍大，如無報錯，請耐心等候
+            </p>
+            <a href="https://ulofsix.github.io/opendata_get/" target="_blank">
+              <button class="btn btn-outline-dark">查看展示網頁</button>
+            </a>
+            <a href="https://github.com/ulofsix/opendata_get">github_url</a>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-4 col-sm-12">
+                <div class="book border bg-light">
+                    <div class="image-container">
+                        <a href="https://ulofsix.github.io/Travel_agency/" target="_blank">
+                            <img src="../imgs/Travel_agency.png" alt="picture">
+                        </a>
+                    </div>
+                    <h4>Travel_agency</h4>
+                    <p>旅行社首頁網站_仿製</p>
+                </div>
+            </div> -->
+
+
+
+
+      </section>
+    </section>
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
   <footer></footer>
-
-
-
-
-
-
-
-
-  <div class="js_list">
+  <div class="scripts_list">
     <!-- scripts -->
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -100,6 +190,8 @@ crossorigin="anonymous"></script> -->
 
     <!-- 總管理 -->
     <script type="module" src="../scripts/all.js"></script>
+
+
   </div>
 </body>
 
